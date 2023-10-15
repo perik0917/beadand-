@@ -1,1 +1,1 @@
-# beadandó
+# beadandó python Puha Erik
