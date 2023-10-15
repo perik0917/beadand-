@@ -135,6 +135,7 @@ class RegistrationProgram:
         pattern = r"\d{3}-\d{3}-\d{3}"
         return re.match(pattern, taj) is not None
 
+# innen indul a program
 if __name__ == "__main__":
     root = tk.Tk()
     app = RegistrationProgram(root)
