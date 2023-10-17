@@ -37,7 +37,7 @@ class RegistrationProgram:
         label_keresztnev.grid(row=1, column=0, sticky="w")
         self.entry_keresztnev = ttk.Entry(self.parent)
         self.entry_keresztnev.grid(row=1, column=1)
-        self.entry_keresztnev.config(justify="center")  # Középre igazítás
+        self.entry_keresztnev.config(justify="center")
 
         label_szuletesi_ido = ttk.Label(self.parent, text="Születési idő:")
         label_szuletesi_ido.grid(row=2, column=0, sticky="w")
@@ -49,7 +49,7 @@ class RegistrationProgram:
         label_szuletesi_hely.grid(row=3, column=0, sticky="w")
         self.entry_szuletesi_hely = ttk.Entry(self.parent)
         self.entry_szuletesi_hely.grid(row=3, column=1)
-        self.entry_szuletesi_hely.config(justify="center")  # Középre igazítás
+        self.entry_szuletesi_hely.config(justify="center")
 
         label_cim = ttk.Label(self.parent, text="Lakcím:")
         label_cim.grid(row=4, column=0, sticky="w")
@@ -58,25 +58,25 @@ class RegistrationProgram:
         label_lakohely.grid(row=5, column=0, sticky="w")
         self.entry_lakohely = ttk.Entry(self.parent)
         self.entry_lakohely.grid(row=5, column=1)
-        self.entry_lakohely.config(justify="center")  # Középre igazítás
+        self.entry_lakohely.config(justify="center")
 
         label_utca = ttk.Label(self.parent, text="Utca:")
         label_utca.grid(row=6, column=0, sticky="w")
         self.entry_utca = ttk.Entry(self.parent)
         self.entry_utca.grid(row=6, column=1)
-        self.entry_utca.config(justify="center")  # Középre igazítás
+        self.entry_utca.config(justify="center")
 
         label_hazszam = ttk.Label(self.parent, text="Házszám:")
         label_hazszam.grid(row=7, column=0, sticky="w")
         self.entry_hazszam = ttk.Entry(self.parent)
         self.entry_hazszam.grid(row=7, column=1)
-        self.entry_hazszam.config(justify="center")  # Középre igazítás
+        self.entry_hazszam.config(justify="center")
 
         label_taj = ttk.Label(self.parent, text="TAJ-szám (000-000-000):")
         label_taj.grid(row=8, column=0, sticky="w")
         self.entry_taj = ttk.Entry(self.parent)
         self.entry_taj.grid(row=8, column=1)
-        self.entry_taj.config(justify="center")  # Középre igazítás
+        self.entry_taj.config(justify="center")
 
         regisztracio_button = ttk.Button(self.parent, text="Regisztráció", command=self.register)
         regisztracio_button.grid(row=9, column=0, columnspan=2)
@@ -97,13 +97,13 @@ class RegistrationProgram:
         month_label.grid(row=2, column=4, sticky="w")
         self.month_entry = ttk.Entry(self.parent, textvariable=self.month_var)
         self.month_entry.grid(row=2, column=5)
-        self.month_entry.config(justify="center")  # Középre igazítás
+        self.month_entry.config(justify="center")
 
         day_label = ttk.Label(self.parent, text="Nap:")
         day_label.grid(row=2, column=6, sticky="w")
         self.day_entry = ttk.Entry(self.parent, textvariable=self.day_var)
         self.day_entry.grid(row=2, column=7)
-        self.day_entry.config(justify="center")  # Középre igazítás
+        self.day_entry.config(justify="center")
 
     def select_date(self):
         self.cal = Calendar(self.parent)
@@ -139,7 +139,6 @@ class RegistrationProgram:
             messagebox.showerror("Hiba", "Házszám csak számokat tartalmazhat!")
             return
 
-        # Most a vizsgálat csak akkor dob hibát, ha valamelyik mező nincs kitöltve
         if not first_name or not last_name or not year or not month or not day or not birthplace or not city or not street or not house_number or not taj:
             messagebox.showerror("Hiba", "Minden mező kitöltése kötelező!")
             return
