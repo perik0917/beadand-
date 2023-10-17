@@ -144,7 +144,7 @@ class RegistrationProgram:
             return
 
         birthdate = f"{year}-{month}-{day}"  # Születési dátum összeállítása
-        registration_data = f"Név: {first_name} {last_name}, Születési dátum: {birthdate}, Születési hely: {birthplace}, Lakcím: {city}, {street} {house_number}, TAJ-szám: {taj}"
+        registration_data = f"Név: {first_name} {last_name}, Születési dátum: {birthdate}, Születési hely: {birthplace}, Lakcím: {city}, {street} utca {house_number}, TAJ-szám: {taj}"
 
         with open("registered_people.txt", "a") as file:
             file.write(registration_data + "\n")
